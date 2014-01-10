@@ -1,0 +1,35 @@
+﻿<Window x:Class="OhHellNo.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="MainWindow" Loaded="windowLoaded" WindowStyle="None" AllowsTransparency="True" Width="1280" Height="1024" FocusManager.FocusedElement="{Binding ElementName=password}" KeyDown="windowTerminate">
+    <Grid Background="White">
+        <DockPanel Margin="34,26,16,24">
+            <DockPanel LastChildFill="True" DockPanel.Dock="Left">
+                <Image Source="topleft.png" Width="50" Height="50" DockPanel.Dock="Top"></Image>
+                <Image Source="bottomleft.png" Width="50" Height="50" DockPanel.Dock="Bottom"></Image>
+                <Image Source="left.png" Width="50" Stretch="Fill"></Image>
+            </DockPanel>
+            <DockPanel LastChildFill="True" DockPanel.Dock="Right">
+                <Image Source="topright.png" Width="50" Height="50" DockPanel.Dock="Top"></Image>
+                <Image Source="bottomright.png" Width="50" Height="50" DockPanel.Dock="Bottom"></Image>
+                <Image Source="right.png" Width="50" Stretch="Fill"></Image>
+            </DockPanel>
+            <Image Source="top.png" DockPanel.Dock="Top" Height="50" Stretch="Fill"></Image>
+            <Image Source="bottom.png" DockPanel.Dock="Bottom" Height="50" Stretch="Fill"></Image>
+
+            <Viewbox MaxWidth="657" Margin="240">
+                <DockPanel VerticalAlignment="Center" HorizontalAlignment="Center">
+                    <Border DockPanel.Dock="Bottom" BorderBrush="Black" BorderThickness="4" Margin="0,10,0,0" Width="382" MaxWidth="382" Height="62">
+                        <Viewbox>
+                            <TextBox Name="password" Width="200" Height="28" BorderBrush="{x:Null}" BorderThickness="0" VerticalContentAlignment="Center" FontSize="16" Padding="5,0"/>
+                        </Viewbox>
+                    </Border>
+                    <Image RenderOptions.BitmapScalingMode="NearestNeighbor" DockPanel.Dock="Bottom" Source="ohn.png" MaxWidth="657" MaxHeight="605"/>
+                </DockPanel>
+            </Viewbox>
+        </DockPanel>
+        <Border Width="40" Height="40" HorizontalAlignment="Right" VerticalAlignment="Top" Background="White" BorderBrush="Black" BorderThickness="4" CornerRadius="0" Opacity="0" MouseEnter="mouseoverButtonHighlight" MouseLeave="mouseleaveButtonHighlight" MouseDown="windowClose">
+            <TextBlock VerticalAlignment="Center" HorizontalAlignment="Center">x</TextBlock>
+        </Border>
+    </Grid>
+</Window>
